@@ -3,14 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kapil's GitHub Pages </title>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your GitHub Pages Site</title>
-<style>
-body {
+    <style>
+        body {
             margin: 0;
             padding: 0;
             background-image: url('/mnt/e4e2203b-ecf7-4807-b641-1fa71921092d/AAAI_images/10006_gt.png'); /* Change the path to your actual image file */
@@ -20,17 +15,17 @@ body {
             color: white; /* Text color on top of the background image */
         }
 
-header {
+        header {
             text-align: center;
             padding: 100px 0;
         }
 
-section {
+        section {
             text-align: center;
             padding: 50px 20px;
         }
 
-footer {
+        footer {
             text-align: center;
             padding: 20px 0;
         }
@@ -38,13 +33,16 @@ footer {
 </head>
 <body>
     <header>
-        <h1>Welcome to My GitHub Pages </h1>
+        <h1>Welcome to My GitHub Pages Site</h1>
     </header>
     <section>
-        <p>Acadmics</p>
+        <p>This is a simple GitHub Pages website.</p>
     </section>
     <footer>
-        <p>&copy; 2024 Kapil</p>
+        <p>&copy; 2024 Your Name</p>
     </footer>
+</body>
+</html>
+
 </body>
 </html>
