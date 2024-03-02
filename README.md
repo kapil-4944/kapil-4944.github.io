@@ -35,7 +35,7 @@
 
 <footer>
     <!-- Add your photo here -->
-    <img src="path_to_your_image.jpg" alt="Description of the image">
+    <img src="kapil.jpg" alt="Description of the image">
 </footer>
 
 </body>
