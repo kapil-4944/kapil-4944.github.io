@@ -3,18 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your GitHub Pages Site</title>
+    <title>Your Website</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-image: url('/mnt/e4e2203b-ecf7-4807-b641-1fa71921092d/AAAI_images/10006_gt.png'); /* Change the path to your actual image file */
-            background-size: cover;
-            background-position: center;
-            font-family: 'Arial', sans-serif;
-            color: white; /* Text color on top of the background image */
-        }
-
         header {
             text-align: center;
             padding: 100px 0;
@@ -32,17 +22,21 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My GitHub Pages Site</h1>
-    </header>
-    <section>
-        <p>This is a simple GitHub Pages website.</p>
-    </section>
-    <footer>
-        <p>&copy; 2024 Your Name</p>
-    </footer>
-</body>
-</html>
+
+<header>
+    <!-- Add your photo here -->
+    <img src="kapil.jpg" alt="Description of the image">
+</header>
+
+<section>
+    <h2>Section Content</h2>
+    <p>This is the content of the section.</p>
+</section>
+
+<footer>
+    <!-- Add your photo here -->
+    <img src="path_to_your_image.jpg" alt="Description of the image">
+</footer>
 
 </body>
 </html>
