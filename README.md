@@ -82,11 +82,11 @@
 <div class="container">
     <div class="photo">
         <!-- Placeholder for photo -->
-        <img src="path_to_your_image.jpg" alt="Your Photo">
+        <img src="kapil.jpg" alt="Your Photo">
     </div>
     <div class="text">
         <!-- Multiple lines of text -->
-        <h1 class="name-heading">Your Name</h1>
+        <h1 class="name-heading">Kapil Choudhary</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget metus nec massa interdum eleifend. Nulla facilisi. Integer bibendum nisl ut urna ullamcorper aliquet.</p>
         <p>Phasellus tempus mattis elit, a consectetur velit fermentum nec. Fusce eu mi quis ligula laoreet tincidunt. Nam accumsan ligula ut velit ultricies scelerisque.</p>
     </div>
