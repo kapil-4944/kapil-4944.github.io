@@ -82,7 +82,7 @@
 <div class="container">
     <div class="photo">
         <!-- Placeholder for photo -->
-        <img src="kapil.jpg" alt="Your Photo">
+        <img src="kapil.jpg" alt="Your Photo" width="20%" height="20%">
     </div>
     <div class="text">
         <!-- Multiple lines of text -->
