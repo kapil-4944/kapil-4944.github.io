@@ -25,7 +25,7 @@
 
 <header>
     <!-- Add your photo here -->
-    <img src="kapil.jpg" alt="Description of the image">
+    <img src="dsg.jpg" alt="Description of the image">
 </header>
 
 <section>
@@ -35,7 +35,7 @@
 
 <footer>
     <!-- Add your photo here -->
-    <img src="kapil.jpg" alt="Description of the image">
+    <img src="fga.jpg" alt="Description of the image">
 </footer>
 
 </body>
