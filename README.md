@@ -21,22 +21,11 @@
         }
     </style>
 </head>
-<body>
-
-<header>
-    <!-- Add your photo here -->
-    <img src="dsg.jpg" alt="Description of the image">
-</header>
 
 <section>
     <h2>Section Content</h2>
     <p>This is the content of the section.</p>
 </section>
-
-<footer>
-    <!-- Add your photo here -->
-    <img src="fga.jpg" alt="Description of the image">
-</footer>
 
 </body>
 <head>
