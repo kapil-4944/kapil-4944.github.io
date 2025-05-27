@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bidirectional Flow Fields for Sparse Input Novel View Synthesis Of Dynamic Scenes</title>
+    <link rel="stylesheet" href="BF-DeRF/styles/w3.css">
+    <link rel="stylesheet" href="BF-DeRF/styles/common.css">
+    <link rel="stylesheet" href="BF-DeRF/styles/navigation.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <script src="./BF-DeRF/scripts/navigation.js"></script>
+    <link rel="stylesheet" href="BF-DeRF/styles/rfderf.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Bidirectional Flow Fields for Sparse Input Novel View Synthesis Of Dynamic Scenes">
+    <meta name="keywords" content="Neural Radiance Fields, Dynamic Radiance Fields, Deformable Radiance Fields, NeRF, K-Planes, DeRF, RF-DeRF, Neural Rendering, Dynamic View Synthesis, Sparse Input, Sparse View, Sparse Flow Prior">
+    <meta name="author" content="Kapil Choudhary">
+    <meta name="viewport" content="width=device-width, initial-scale=.9">
+    <style>
+        /* Add these styles to control video sizing and centering */
+        figure {
+            text-align: center;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+        figure video {
+            width: 80%;
+            max-width: 800px;
+            display: block;
+            margin: 0 auto;
+        }
+        figcaption {
+            margin-top: 10px;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* Adjust spacing for better readability */
+        h2, h3, h4 {
+            margin-top: 30px;
+        }
+        .w3-container {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="w3-main">
+    <div class="w3-container" id="title-panel">
+        <h1 class="page-title">Bidirectional Flow Fields for Sparse Input Novel View Synthesis Of Dynamic Scenes</h1>
+        <p class="page-subtitle">IEEE ICIP, 2025</p>
+        <p style="text-align: center; font-size: large">
+            <a href="../index.html"><u>Kapl Choudhary</u></a>,
+            <a href="https://nagabhushansn95.github.io/"><u>Nagabhushan Somraj</u></a> and
+            <a href="https://ece.iisc.ac.in/~rajivs"><u>Rajiv Soundararajan</u></a>
+        </p>
+        <p style="text-align: center; font-size: large">
+            Indian Institute of Science
+        </p>
+        <div class="w3-container" id="downloads" style="text-align: center">
+            <a href="">
+                <button class="link-button" title="View paper on ACM Library">ACM</button>
+            </a>
+            <a href="">
+                <button class="link-button" title="View paper on arXiv">arXiv</button>
+            </a>
+            <a href="">
+                <button class="link-button" title="View Code on GitHub">Code</button>
+            </a>
+            <a href="">
+                <button class="link-button" title="View SIGGRAPH 2024 Slides">Slides</button>
+            </a>
+            <a href="">
+                <button class="link-button" title="View SIGGRAPH 2024 Poster">Poster</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="w3-container">
+        <h2>Video Comparisons</h2>
+        <p>We organize the video comparisons into 3 sets:</p>
+
+        <ol>
+            <li><strong>Baseline Comparison:</strong> We compare our model (BF-DeRF) with 4DGS, STGS, and RF-DeRF across different datasets.</li>
+            <li><strong>Impact of Initialization & Hyperparameters:</strong> We present findings on how initialization and hyperparameter sensitivity affect Gaussian splatting models.</li>
+            <li><strong>Visualization Results:</strong> Finally, we showcase the visualization results obtained by our model.</li>
+        </ol>
+
+        <p>The videos are encoded using H.264 codec with yuv420p as the pixel format, and at a frame rate of 30fps.</p>
+
+        <h3>Comparisons with Baselines</h3>
+        <h4>4DGS vs BF-DeRF(ours)</h4>
+        <figure>
+            <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
+                <source src="BF-DeRF/07_VideoComparisonMaker01a_Birthday_rgb.mp4" type="video/mp4">
+            </video>
+            <figcaption>
+                Scene details: InterDigital dataset, Birthday scene with 3 input views. BF-DeRF successfully preserves the writing on the hanging balloon, whereas 4DGS fails to capture the details, including the moving person. Additionally, the red paper flower disk on the left side of the scene becomes deformed in 4DGS, while BF-DeRF reconstructs its structure more accurately
+            </figcaption>
+        </figure>
+
+        <figure>
+            <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
+                <source src="BF-DeRF/07_VideoComparisonMaker01a_Theater_rgb.mp4" type="video/mp4">
+            </video>
+            <figcaption>
+                Scene details: InterDigital dataset, Theater Scene 3 input views. While 4DGS struggles to fully reconstruct the puppet, BF-DeRF achieves a significantly better reconstruction.
+            </figcaption>
+        </figure>
+
+        <h4>STGS vs BF-DeRF(ours)</h4>
+        <figure>
+            <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
+                <source src="BF-DeRF/07_VideoComparisonMaker01a_balloon2_3Views_rgb.mp4" type="video/mp4">
+            </video>
+            <figcaption>
+                Scene details: Nvidia dataset, balloon2 scene with 3 input views. STGS reconstruction fails to render details (green strips) on the dinosaur balloon, Whereas our model reconstructs finer details better. The STGS-rendered video looks dark-shaded because the model is very sensitive to hyperparameters. Ground Truth video lighting is similar to BF-DeRF model-rendered video (check the video just below).
+            </figcaption>
+        </figure>
+
+        <figure>
+            <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
+                <source src="BF-DeRF/Ballon2_withGT.mp4" type="video/mp4">
+            </video>
+            <figcaption>
+                Scene details: Same comparison as above example with Ground Truth video comparision. This comparision shows that STGS-rendered video looks dark-shaded, which seems to learn different color grading in novel view. Ground Truth and BF-DeRF model video lighting are similar.
+            </figcaption>
+        </figure>
+
+        <h4>RF-DeRF vs BF-DeRF(ours)</h4>
+        <figure>
+            <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
+                <source src="BF-DeRF/07_VideoComparisonMaker01a_flame_salmon_1_rgb.mp4" type="video/mp4">
+            </video>
+            <figcaption>
+                Scene details: N3DV dataset, flame_salmon_1 scene with 3 input views. The reconstruction quality around both moving regions (face, flame, and burner) and static regions(objects on top of cupboard, left poster hanging on wall, and windows behind the person) is much better in our BF-DeRF model because of bi-directional flow fields whereas RF-DeRF fails to render good-quality videos due to the unidirectional motion model.
+            </figcaption>
+        </figure>
+
+        <h3>Impact of Initialization & hyperparameters</h3>
+        <h4>4DGS vs BF-DeRF(ours)</h4>
+        <figure>
+            <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
+                <source src="BF-DeRF/07_VideoComparisonMaker01a_balloon2.mp4" type="video/mp4">
+            </video>
+            <figcaption>
+                Scene details: Effects of poor initializations 4DGS on 2 input views. Nvidia dataset balloon2 scene, from 4DGS rendered video, we can not perceive fine details of the scene. In contrast, our model is able to get a relatively better reconstruction of the fine details of the scenes(green strips).
+            </figcaption>
+        </figure>
+
+        <h4>STGS vs BF-DeRF(ours)</h4>
+        <figure>
+            <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
+                <source src="BF-DeRF/07_VideoComparisonMaker01a_balloon1_rgb.mp4" type="video/mp4">
+            </video>
+            <figcaption>
+                Scene details: Effects of sensitive hyperparameter, STGS on 2 input views. Nvidia dataset balloon1 scene, from STGS rendered video, we can not perceive any information about the scene and the color of the rendered video is very different from original colors. In contrast, our volumetric model is able to get a relatively better understanding of the scene.
+            </figcaption>
+        </figure>
+
+        <figure>
+            <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
+                <source src="BF-DeRF/07_VideoComparisonMaker01a_balloon2_rgb.mp4" type="video/mp4">
+            </video>
+            <figcaption>
+                Scene details: Effects of sensitive hyperparameter, STGS on 2 input views. Nvidia dataset balloon2 scene, from STGS rendered video, we can clearly see the dark blue colored video because of hyperparameters and also we can not perceive any information about the scene. In contrast, our volumetric model is able to get a relatively better understanding of the scene.
+            </figcaption>
+        </figure>
+
+        <h3>Scene Flow Visualization</h3>
+        <h4>Pixel Tracking</h4>
+        <figure>
+            <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
+                <source src="BF-DeRF/visualization_cook_spinach.mp4" type="video/mp4">
+            </video>
+            <figcaption>
+                Scene details: cook spinach from N3DV dataset. Flow visualization: colored circles are starting pixels which are being traced trhought video. The train behind these pixels shows the path taken by these pixels.
+            </figcaption>
+        </figure>
+    </div>
+</div>
+</body>
+</html>
