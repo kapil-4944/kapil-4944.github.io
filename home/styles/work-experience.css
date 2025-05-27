@@ -1,0 +1,50 @@
+.header{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Tinos';
+    font-weight: 500;
+    font-size: 30px;
+    justify-content: center;
+    text-shadow: 3px 3px 5px rgb(187, 185, 185);
+}
+
+.iisc{
+    display: flex;
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.company-name{
+    display: flex;
+    padding-left: 25vw;
+    flex-direction: column;
+    gap: 5px; /* Space between elements */
+    width: 30%;
+}
+
+.year{
+    display: flex;
+    padding-left: 10vw;
+}
+
+.contribution{
+    display: flex;
+    flex-direction: column;
+    padding-left: 30vw;
+    padding-top: 15px;
+    max-width: 40%;
+    align-content: left;
+}
+
+.contribution::first-line {
+    padding-left: 20px; /* Adds padding only to the first line */
+}
+
+.project-title {
+    font-size: clamp(14px, 2vw, 18px); /* Responsive font size */
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(212, 78, 107);
+}
+

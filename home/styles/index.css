@@ -1,0 +1,210 @@
+body{
+    /* font-family: "Tinos", Arial; */
+    background-color: rgb(242, 247, 247);
+    margin-bottom: 50px;
+}
+
+p{
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+.main-div {
+    display: flex;
+    align-items: flex-start; /* Aligns image and text at the top */
+    justify-content: center;
+    gap: 5vw; /* Adds spacing between image and text */
+    margin-top: 30px;
+}
+
+.profile-pic {
+    display: flex;
+    width: 20vw; /* 20% of the viewport width */
+    max-width: 200px; /* Ensures it doesn’t grow too big */
+    min-width: 150px; /* Ensures it doesn’t shrink too small */
+    border-radius: 4px;
+}
+
+.my-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensures content aligns to the top */
+}
+
+h1 {
+    display: flex;
+    font-size: clamp(24px, 5vw, 40px); /* Resizes between 24px and 40px */
+    font-weight: 500;
+    margin-bottom: 2vh; /* Adjusts bottom margin dynamically */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3vw; /* Adjusts space dynamically based on screen width */
+    font-size: clamp(14px, 2vw, 18px); /* Dynamically resizes font */
+}
+
+.about-info a {
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px; /* Space between icons */
+    align-items: center;
+    margin-top: 8px;
+}
+
+.social-links a {
+    text-decoration: none;
+}
+
+/* 📌 Responsive adjustments for mobile screens */
+@media (max-width: 600px) {
+    .main-div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .my-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Ensures content aligns to the top */
+      text-align: left;
+  }
+
+    .profile-pic {
+        margin-right: 0;
+        margin-bottom: 10px; /* Adds space below image */
+    }
+
+    .about-info {
+        gap: 5px; /* Slightly increases spacing for readability */
+    }
+}
+
+
+.horizontal-line {
+  width: clamp(70%, 50vw, 90%); /* Responsive width: adjusts between 60% and 90% */
+  max-width: 1000px; /* Ensures it doesn’t get too wide */
+  margin: 2vh auto; /* Scales margin with screen height */
+  color: gray;
+  border: 1px solid gray; /* Ensure visibility */
+}
+
+@media (max-width: 600px) {
+  .horizontal-line {
+      width: 90%; /* Uses more width on smaller screens */
+      margin: 3vh auto; /* Adds extra vertical spacing */
+  }
+}
+
+
+  .about-text{
+    align-content: center;
+  }
+  
+  .news{
+    display: flex;
+    align-items: center;
+  }
+  
+
+  .navbar {
+    background-color: #d7dddf;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding: 10px 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+    color: rgb(112, 107, 107);
+    text-decoration: none;
+    padding: 14px 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    /* background-color: #8d9e9f;
+    border-radius: 5px; */
+    color: rgb(0, 0, 0);
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+  }
+
+.about-text {
+  width: clamp(60%, 50vw, 90%); /* Scales between 60% and 90% based on screen width */
+  max-width: 800px; /* Ensures it doesn’t stretch too much */
+  margin: auto;
+  text-align: left;
+  line-height: 1.6;
+  padding: 0.5vw; /* Adds some spacing inside */
+}
+
+@media (max-width: 600px) {
+  .about-text {
+      width: 90%; /* Takes more space on small screens */
+      text-align: left; /* Center-aligns for better readability */
+  }
+}
+
+
+.news-title {
+  width: clamp(60%, 50vw, 90%); /* Responsive width between 60% and 90% */
+  max-width: 800px; /* Ensures it doesn’t get too wide */
+  margin: auto;
+  text-align: left;
+  line-height: 1.6;
+  font-size: clamp(18px, 3vw, 25px); /* Responsive font size */
+  font-weight: 600;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.news-list {
+  width: clamp(60%, 45vw, 85%); /* Responsive width between 60% and 85% */
+  max-width: 750px;
+  margin: auto;
+  text-align: left;
+}
+
+.news-list li {
+  margin: 1vh 0; /* Scales margin dynamically based on viewport height */
+  font-size: clamp(14px, 2vw, 18px); /* Responsive font size */
+}
+
+
+@media (max-width: 600px) {
+  .news-title,
+  .news-list {
+      width: 90%; /* Takes up more space on small screens */
+      text-align: left; /* Centers text for better readability */
+  }
+
+  .news-list li {
+      font-size: 16px; /* Slightly bigger font for readability */
+  }
+}
+
