@@ -18,31 +18,7 @@
           content="Neural Radiance Fields, Dynamic Radiance Fields, Deformable Radiance Fields, NeRF, K-Planes, DeRF, RF-DeRF, Neural Rendering, Dynamic View Synthesis, Sparse Input, Sparse View, Sparse Flow Prior">
     <meta name="author" content="Kapil Choudhary">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /*h1 {*/
-        /*    text-align: center;*/
-        /*}*/
-
-
-        h3 {
-            text-align: center;
-        }
-        video {
-            width: 45vw;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-        figcaption {
-            text-align: center;
-        }
-        .small_video {
-            width: 20vw;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-    </style>
+    
 </head>
 <body>
     <div class="w3-main">
@@ -76,7 +52,7 @@
         </div>
     </div>
 
-<h1>Video Comparisons</h1>
+<h2>Video Comparisons</h2>
 We organize the video comparisons into 3 sets:
 
 <ol>
@@ -88,8 +64,8 @@ We organize the video comparisons into 3 sets:
 <!--The videos in this page are also separately available, should the viewers/reviewers prefer to view the videos directly.-->
 The videos are encoded using H.264 codec with yuv420p as the pixel format, and at a frame rate of 30fps.<br> <br>
 
-<h2>Comparisons with Baselines</h2>
-<h3> 4DGS vs BF-DeRF(ours)</h3>
+<h3>Comparisons with Baselines</h3>
+<h4> 4DGS vs BF-DeRF(ours)</h4>
 <figure>
     <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
         <source src="BF-DeRF/07_VideoComparisonMaker01a_Birthday_rgb.mp4" type="video/mp4">
@@ -115,7 +91,7 @@ The videos are encoded using H.264 codec with yuv420p as the pixel format, and a
         Scene details: cook spinach from N3DV dataset with two input views. We show spiral video to show the improvement in learning 3D scene more clearly.
     </figcaption>
 </figure> -->
-<h3> STGS vs BF-DeRF(ours)</h3>
+<h4> STGS vs BF-DeRF(ours)</h4>
 <figure>
     <video autoplay loop muted controls onloadstart="this.playbackRate = 1;" >
         <source src="BF-DeRF/07_VideoComparisonMaker01a_balloon2_3Views_rgb.mp4" type="video/mp4">
@@ -134,7 +110,7 @@ The videos are encoded using H.264 codec with yuv420p as the pixel format, and a
     </figcaption>
 </figure>
 <br><br>
-<h3> RF-DeRF vs BF-DeRF(ours)</h3>
+<h4> RF-DeRF vs BF-DeRF(ours)</h4>
 <figure>
     <video autoplay loop muted controls onloadstart="this.playbackRate = 1;" >
         <source src="BF-DeRF/07_VideoComparisonMaker01a_flame_salmon_1_rgb.mp4" type="video/mp4">
@@ -149,8 +125,8 @@ The videos are encoded using H.264 codec with yuv420p as the pixel format, and a
 <br><br>
 <br><br>
 
-<h2> Impact of Initialization & hyperparameters </h2>
-<h3> 4DGS vs BF-DeRF(ours)</h3>
+<h3> Impact of Initialization & hyperparameters </h3>
+<h4> 4DGS vs BF-DeRF(ours)</h4>
 <figure>
     <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
         <source src="BF-DeRF/07_VideoComparisonMaker01a_balloon2.mp4" type="video/mp4">
@@ -161,7 +137,7 @@ The videos are encoded using H.264 codec with yuv420p as the pixel format, and a
 </figure>
 <br><br>
 
-<h3> STGS vs BF-DeRF(ours)</h3>
+<h4> STGS vs BF-DeRF(ours)</h4>
 <figure>
     <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
         <source src="BF-DeRF/07_VideoComparisonMaker01a_balloon1_rgb.mp4" type="video/mp4">
@@ -182,8 +158,8 @@ The videos are encoded using H.264 codec with yuv420p as the pixel format, and a
 <br><br>
 
 <br><br>
-<h2> Scene Flow Visualization</h2>
-<h3>Pixel Tracking</h3>
+<h3> Scene Flow Visualization</h3>
+<h4>Pixel Tracking</h4>
 <figure>
     <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
         <source src="BF-DeRF/visualization_cook_spinach.mp4" type="video/mp4">
