@@ -16,30 +16,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=.9">
     <style>
         /* Add these styles to control video sizing and centering */
-        figure {
+        .video-container {
+            width: 100%;
+            margin: 30px 0;
             text-align: center;
-            margin: 20px auto;
-            max-width: 100%;
         }
-        figure video {
+        .video-container video {
             width: 80%;
             max-width: 800px;
             display: block;
             margin: 0 auto;
         }
-        figcaption {
+        .video-caption {
             margin-top: 10px;
             text-align: center;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            padding: 0 10px;
         }
         /* Adjust spacing for better readability */
         h2, h3, h4 {
-            margin-top: 30px;
+            margin-top: 40px;
         }
         .w3-container {
             padding: 20px;
+        }
+        /* Ensure each video is in its own row */
+        figure {
+            display: block;
+            width: 100%;
+            margin: 30px 0;
         }
     </style>
 </head>
@@ -89,93 +96,112 @@
 
         <h3>Comparisons with Baselines</h3>
         <h4>4DGS vs BF-DeRF(ours)</h4>
-        <figure>
-            <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
-                <source src="BF-DeRF/07_VideoComparisonMaker01a_Birthday_rgb.mp4" type="video/mp4">
-            </video>
-            <figcaption>
-                Scene details: InterDigital dataset, Birthday scene with 3 input views. BF-DeRF successfully preserves the writing on the hanging balloon, whereas 4DGS fails to capture the details, including the moving person. Additionally, the red paper flower disk on the left side of the scene becomes deformed in 4DGS, while BF-DeRF reconstructs its structure more accurately
-            </figcaption>
-        </figure>
+        
+        <div class="video-container">
+            <figure>
+                <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
+                    <source src="BF-DeRF/07_VideoComparisonMaker01a_Birthday_rgb.mp4" type="video/mp4">
+                </video>
+                <figcaption class="video-caption">
+                    Scene details: InterDigital dataset, Birthday scene with 3 input views. BF-DeRF successfully preserves the writing on the hanging balloon, whereas 4DGS fails to capture the details, including the moving person. Additionally, the red paper flower disk on the left side of the scene becomes deformed in 4DGS, while BF-DeRF reconstructs its structure more accurately
+                </figcaption>
+            </figure>
+        </div>
 
-        <figure>
-            <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
-                <source src="BF-DeRF/07_VideoComparisonMaker01a_Theater_rgb.mp4" type="video/mp4">
-            </video>
-            <figcaption>
-                Scene details: InterDigital dataset, Theater Scene 3 input views. While 4DGS struggles to fully reconstruct the puppet, BF-DeRF achieves a significantly better reconstruction.
-            </figcaption>
-        </figure>
+        <div class="video-container">
+            <figure>
+                <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
+                    <source src="BF-DeRF/07_VideoComparisonMaker01a_Theater_rgb.mp4" type="video/mp4">
+                </video>
+                <figcaption class="video-caption">
+                    Scene details: InterDigital dataset, Theater Scene 3 input views. While 4DGS struggles to fully reconstruct the puppet, BF-DeRF achieves a significantly better reconstruction.
+                </figcaption>
+            </figure>
+        </div>
 
         <h4>STGS vs BF-DeRF(ours)</h4>
-        <figure>
-            <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
-                <source src="BF-DeRF/07_VideoComparisonMaker01a_balloon2_3Views_rgb.mp4" type="video/mp4">
-            </video>
-            <figcaption>
-                Scene details: Nvidia dataset, balloon2 scene with 3 input views. STGS reconstruction fails to render details (green strips) on the dinosaur balloon, Whereas our model reconstructs finer details better. The STGS-rendered video looks dark-shaded because the model is very sensitive to hyperparameters. Ground Truth video lighting is similar to BF-DeRF model-rendered video (check the video just below).
-            </figcaption>
-        </figure>
+        <div class="video-container">
+            <figure>
+                <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
+                    <source src="BF-DeRF/07_VideoComparisonMaker01a_balloon2_3Views_rgb.mp4" type="video/mp4">
+                </video>
+                <figcaption class="video-caption">
+                    Scene details: Nvidia dataset, balloon2 scene with 3 input views. STGS reconstruction fails to render details (green strips) on the dinosaur balloon, Whereas our model reconstructs finer details better. The STGS-rendered video looks dark-shaded because the model is very sensitive to hyperparameters. Ground Truth video lighting is similar to BF-DeRF model-rendered video (check the video just below).
+                </figcaption>
+            </figure>
+        </div>
 
-        <figure>
-            <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
-                <source src="BF-DeRF/Ballon2_withGT.mp4" type="video/mp4">
-            </video>
-            <figcaption>
-                Scene details: Same comparison as above example with Ground Truth video comparision. This comparision shows that STGS-rendered video looks dark-shaded, which seems to learn different color grading in novel view. Ground Truth and BF-DeRF model video lighting are similar.
-            </figcaption>
-        </figure>
+        <div class="video-container">
+            <figure>
+                <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
+                    <source src="BF-DeRF/Ballon2_withGT.mp4" type="video/mp4">
+                </video>
+                <figcaption class="video-caption">
+                    Scene details: Same comparison as above example with Ground Truth video comparision. This comparision shows that STGS-rendered video looks dark-shaded, which seems to learn different color grading in novel view. Ground Truth and BF-DeRF model video lighting are similar.
+                </figcaption>
+            </figure>
+        </div>
 
         <h4>RF-DeRF vs BF-DeRF(ours)</h4>
-        <figure>
-            <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
-                <source src="BF-DeRF/07_VideoComparisonMaker01a_flame_salmon_1_rgb.mp4" type="video/mp4">
-            </video>
-            <figcaption>
-                Scene details: N3DV dataset, flame_salmon_1 scene with 3 input views. The reconstruction quality around both moving regions (face, flame, and burner) and static regions(objects on top of cupboard, left poster hanging on wall, and windows behind the person) is much better in our BF-DeRF model because of bi-directional flow fields whereas RF-DeRF fails to render good-quality videos due to the unidirectional motion model.
-            </figcaption>
-        </figure>
+        <div class="video-container">
+            <figure>
+                <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
+                    <source src="BF-DeRF/07_VideoComparisonMaker01a_flame_salmon_1_rgb.mp4" type="video/mp4">
+                </video>
+                <figcaption class="video-caption">
+                    Scene details: N3DV dataset, flame_salmon_1 scene with 3 input views. The reconstruction quality around both moving regions (face, flame, and burner) and static regions(objects on top of cupboard, left poster hanging on wall, and windows behind the person) is much better in our BF-DeRF model because of bi-directional flow fields whereas RF-DeRF fails to render good-quality videos due to the unidirectional motion model.
+                </figcaption>
+            </figure>
+        </div>
 
         <h3>Impact of Initialization & hyperparameters</h3>
         <h4>4DGS vs BF-DeRF(ours)</h4>
-        <figure>
-            <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
-                <source src="BF-DeRF/07_VideoComparisonMaker01a_balloon2.mp4" type="video/mp4">
-            </video>
-            <figcaption>
-                Scene details: Effects of poor initializations 4DGS on 2 input views. Nvidia dataset balloon2 scene, from 4DGS rendered video, we can not perceive fine details of the scene. In contrast, our model is able to get a relatively better reconstruction of the fine details of the scenes(green strips).
-            </figcaption>
-        </figure>
+        <div class="video-container">
+            <figure>
+                <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
+                    <source src="BF-DeRF/07_VideoComparisonMaker01a_balloon2.mp4" type="video/mp4">
+                </video>
+                <figcaption class="video-caption">
+                    Scene details: Effects of poor initializations 4DGS on 2 input views. Nvidia dataset balloon2 scene, from 4DGS rendered video, we can not perceive fine details of the scene. In contrast, our model is able to get a relatively better reconstruction of the fine details of the scenes(green strips).
+                </figcaption>
+            </figure>
+        </div>
 
         <h4>STGS vs BF-DeRF(ours)</h4>
-        <figure>
-            <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
-                <source src="BF-DeRF/07_VideoComparisonMaker01a_balloon1_rgb.mp4" type="video/mp4">
-            </video>
-            <figcaption>
-                Scene details: Effects of sensitive hyperparameter, STGS on 2 input views. Nvidia dataset balloon1 scene, from STGS rendered video, we can not perceive any information about the scene and the color of the rendered video is very different from original colors. In contrast, our volumetric model is able to get a relatively better understanding of the scene.
-            </figcaption>
-        </figure>
+        <div class="video-container">
+            <figure>
+                <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
+                    <source src="BF-DeRF/07_VideoComparisonMaker01a_balloon1_rgb.mp4" type="video/mp4">
+                </video>
+                <figcaption class="video-caption">
+                    Scene details: Effects of sensitive hyperparameter, STGS on 2 input views. Nvidia dataset balloon1 scene, from STGS rendered video, we can not perceive any information about the scene and the color of the rendered video is very different from original colors. In contrast, our volumetric model is able to get a relatively better understanding of the scene.
+                </figcaption>
+            </figure>
+        </div>
 
-        <figure>
-            <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
-                <source src="BF-DeRF/07_VideoComparisonMaker01a_balloon2_rgb.mp4" type="video/mp4">
-            </video>
-            <figcaption>
-                Scene details: Effects of sensitive hyperparameter, STGS on 2 input views. Nvidia dataset balloon2 scene, from STGS rendered video, we can clearly see the dark blue colored video because of hyperparameters and also we can not perceive any information about the scene. In contrast, our volumetric model is able to get a relatively better understanding of the scene.
-            </figcaption>
-        </figure>
+        <div class="video-container">
+            <figure>
+                <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
+                    <source src="BF-DeRF/07_VideoComparisonMaker01a_balloon2_rgb.mp4" type="video/mp4">
+                </video>
+                <figcaption class="video-caption">
+                    Scene details: Effects of sensitive hyperparameter, STGS on 2 input views. Nvidia dataset balloon2 scene, from STGS rendered video, we can clearly see the dark blue colored video because of hyperparameters and also we can not perceive any information about the scene. In contrast, our volumetric model is able to get a relatively better understanding of the scene.
+                </figcaption>
+            </figure>
+        </div>
 
         <h3>Scene Flow Visualization</h3>
         <h4>Pixel Tracking</h4>
-        <figure>
-            <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
-                <source src="BF-DeRF/visualization_cook_spinach.mp4" type="video/mp4">
-            </video>
-            <figcaption>
-                Scene details: cook spinach from N3DV dataset. Flow visualization: colored circles are starting pixels which are being traced trhought video. The train behind these pixels shows the path taken by these pixels.
-            </figcaption>
-        </figure>
+        <div class="video-container">
+            <figure>
+                <video autoplay loop muted controls onloadstart="this.playbackRate = 1;">
+                    <source src="BF-DeRF/visualization_cook_spinach.mp4" type="video/mp4">
+                </video>
+                <figcaption class="video-caption">
+                    Scene details: cook spinach from N3DV dataset. Flow visualization: colored circles are starting pixels which are being traced trhought video. The train behind these pixels shows the path taken by these pixels.
+                </figcaption>
+            </figure>
+        </div>
     </div>
 </div>
 </body>
